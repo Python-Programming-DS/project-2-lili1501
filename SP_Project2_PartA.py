@@ -1,7 +1,12 @@
 """
-Tic-Tac-Toe
+TIC TAC TOE GAME
+> Description:
+A 2 player program built to play tic tac toe
 
-This program is a simple Tic-Tac-Toe game using classes and objects.
+File used tic_tac_toe_skeleton.py
+> Objective: To use classes and methods by building a tic-tac-toe game
+
+By: Shesadree Priyadarshani
     
     
 """
@@ -95,7 +100,6 @@ class Game:
         
 
     # this method checks if the game has met an end condition by calling checkFull() and checkWin()
-    # hint: you can call a class method using self.method_name() within another class method, e.g., self.checkFull()
     def checkEnd(self):
         if self.checkWin() == True :
             return True
@@ -106,8 +110,7 @@ class Game:
     
 
 
-    # this method runs the tic-tac-toe game
-     # hint: you can call a class method using self.method_name() within another class method
+    # this method initiate the tic-tac-toe game
     def playGame(self):
         print("\n Hey Player! Let's play Tic-Tac-Toe!")
         self.board.printBoard()
@@ -131,7 +134,7 @@ class Game:
                     break
 
                 self.switchPlayer()
-                # self.board.printBoard()
+
 
 
 
