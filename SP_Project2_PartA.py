@@ -135,10 +135,6 @@ class Game:
 
                 self.switchPlayer()
 
-
-
-
-
 # main function
 def main():
     # first initializes a variable to repeat the game
