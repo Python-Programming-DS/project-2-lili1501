@@ -7,10 +7,8 @@ File used tic_tac_toe_skeleton.py
 > Objective: To use classes and methods by building a tic-tac-toe game
 
 By: Shesadree Priyadarshani
-    
-    
+   
 """
-
 
 # define Board class to building the Game Board:
 
