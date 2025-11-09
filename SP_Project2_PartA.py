@@ -118,8 +118,14 @@ class Game:
             print(f"Where do you want your {self.turn} placed?")
             #To highlight the user input as red
             print("\033[0mPlease enter row number and column number separated by a comma:\033[91m", end="\n")
-            row, col = map(int, input().split(","))
-
+            try:
+                row, col = map(int, input().split(",")) 
+            except ValueError:
+                #To bring back the terminal back to default color text
+                print("\033[0m", end="")
+                print("Invalid input. Please enter two numbers separated by a comma.")
+                continue
+    
             #To bring back the terminal back to default color text
             print("\033[0m", end="")
             print(f"You have entered row #{row}\n\t  and column #{col}")
