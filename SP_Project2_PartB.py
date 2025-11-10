@@ -8,9 +8,7 @@ File used Project2_PartA.py
 
 By: Shesadree Priyadarshani
     
-    
 """
-
 
 # define Board class to building the Game Board:
 
@@ -174,18 +172,23 @@ class Game:
 
     # this method initiate the tic-tac-toe game
     def playGame(self):
-        print("\n Hey Player! Let's play Tic-Tac-Toe!")
+
+        print("\nHey Player! Let's play Tic-Tac-Toe!")
         self.board.printBoard()
         print(f"New Game: Player X goes first\n")
+
         while True:
             print(f"\n{self.turn}'s turn")
             if self.turn == 'X':
                 print(f"Where do you want your {self.turn} placed?")
+
                 #To highlight the user input as red
                 print("\033[0mPlease enter row number and column number separated by a comma:\033[91m", end="\n")
+
                 try:
                     row, col = map(int, input().split(",")) 
                 except ValueError:
+
                     #To bring back the terminal back to default color text
                     print("\033[0m", end="")
                     print("Invalid input. Please enter two numbers separated by a comma.")
@@ -205,7 +208,7 @@ class Game:
                 move = self.get_best_move()
                 if move:
                     row, col = move
-                    print(f"Computer chose row #{row}\n\t  and column #{col}")
+                    print(f"Computer chose row #{row}\n\t and column #{col}")
                 else:
                     print("No moves left!")
                     break
